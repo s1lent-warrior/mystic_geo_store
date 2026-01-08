@@ -1,0 +1,46 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// Source: sot/cities/ki.json
+
+import '../../../models/geo_city.dart';
+import '../../../models/geo_country_iso2.dart';
+
+const List<GeoCity> kGeoCities_KI = <GeoCity>[
+  GeoCity(id: 'KI-gilbert_islands-abaiang', name: 'Abaiang', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-abemama', name: 'Abemama', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-ambo_village', name: 'Ambo Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-aranuka', name: 'Aranuka', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-arorae', name: 'Arorae', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-bairiki_village', name: 'Bairiki Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-banaba', name: 'Banaba', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-banraeaba_village', name: 'Banraeaba Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-beru', name: 'Beru', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-betio_village', name: 'Betio Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-bikenibeu_village', name: 'Bikenibeu Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-bonriki_village', name: 'Bonriki Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-buota_village', name: 'Buota Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-butaritari', name: 'Butaritari', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-eita_village', name: 'Eita Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-kuria', name: 'Kuria', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-maiana', name: 'Maiana', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-makin', name: 'Makin', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-makin_village', name: 'Makin Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-marakei', name: 'Marakei', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-nawerewere_village', name: 'Nawerewere Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-nikunau', name: 'Nikunau', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-nonouti', name: 'Nonouti', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-onotoa', name: 'Onotoa', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-rawannawi_village', name: 'Rawannawi Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-tabiteuea', name: 'Tabiteuea', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-tamana', name: 'Tamana', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-tarawa', name: 'Tarawa', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-teaoraereke_village', name: 'Teaoraereke Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-gilbert_islands-temaiku_village', name: 'Temaiku Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-gilbert_islands', iata: null),
+  GeoCity(id: 'KI-line_islands-banana_village', name: 'Banana Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-line_islands', iata: null),
+  GeoCity(id: 'KI-line_islands-kiritimati', name: 'Kiritimati', countryIso2: GeoCountryIso2.KI, stateId: 'KI-line_islands', iata: null),
+  GeoCity(id: 'KI-line_islands-london_village', name: 'London Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-line_islands', iata: null),
+  GeoCity(id: 'KI-line_islands-napari_village', name: 'Napari Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-line_islands', iata: null),
+  GeoCity(id: 'KI-line_islands-tabuaeran', name: 'Tabuaeran', countryIso2: GeoCountryIso2.KI, stateId: 'KI-line_islands', iata: null),
+  GeoCity(id: 'KI-line_islands-tabwakea_village', name: 'Tabwakea Village', countryIso2: GeoCountryIso2.KI, stateId: 'KI-line_islands', iata: null),
+  GeoCity(id: 'KI-line_islands-teraina', name: 'Teraina', countryIso2: GeoCountryIso2.KI, stateId: 'KI-line_islands', iata: null),
+  GeoCity(id: 'KI-phoenix_islands-kanton', name: 'Kanton', countryIso2: GeoCountryIso2.KI, stateId: 'KI-phoenix_islands', iata: null),
+];

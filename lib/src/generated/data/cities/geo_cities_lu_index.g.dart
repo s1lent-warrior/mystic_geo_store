@@ -1,0 +1,19 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// Source: sot/cities/lu.json
+//
+// stateId -> indices into [kGeoCities_LU] for fast citiesOfState lookups.
+
+const Map<String, List<int>> kGeoCityIndexByState_LU = <String, List<int>>{
+  'LU-canton_of_capellen': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+  'LU-canton_of_clervaux': <int>[17, 18, 19, 20, 21, 22],
+  'LU-canton_of_diekirch': <int>[23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+  'LU-canton_of_echternach': <int>[36, 37, 38, 39, 40, 41, 42, 43],
+  'LU-canton_of_esch_sur_alzette': <int>[44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68],
+  'LU-canton_of_grevenmacher': <int>[69, 70, 71, 72, 73, 74, 75, 76, 77, 78],
+  'LU-canton_of_luxembourg': <int>[79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100],
+  'LU-canton_of_mersch': <int>[101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112],
+  'LU-canton_of_redange': <int>[113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123],
+  'LU-canton_of_remich': <int>[124, 125, 126, 127, 128, 129, 130, 131],
+  'LU-canton_of_vianden': <int>[132, 133, 134],
+  'LU-canton_of_wiltz': <int>[135, 136, 137, 138, 139, 140, 141, 142, 143],
+};

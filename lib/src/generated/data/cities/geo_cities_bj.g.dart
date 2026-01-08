@@ -1,0 +1,45 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// Source: sot/cities/bj.json
+
+import '../../../models/geo_city.dart';
+import '../../../models/geo_country_iso2.dart';
+
+const List<GeoCity> kGeoCities_BJ = <GeoCity>[
+  GeoCity(id: 'BJ-alibori_department-banikoara', name: 'Banikoara', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-alibori_department', iata: null),
+  GeoCity(id: 'BJ-alibori_department-kandi', name: 'Kandi', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-alibori_department', iata: null),
+  GeoCity(id: 'BJ-alibori_department-malanville', name: 'Malanville', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-alibori_department', iata: null),
+  GeoCity(id: 'BJ-atakora_department-guilmaro', name: 'Guilmaro', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atakora_department', iata: null),
+  GeoCity(id: 'BJ-atakora_department-natitingou', name: 'Natitingou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atakora_department', iata: null),
+  GeoCity(id: 'BJ-atakora_department-tanguieta', name: 'Tanguieta', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atakora_department', iata: null),
+  GeoCity(id: 'BJ-atakora_department-tanguieta', name: 'Tanguiéta', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atakora_department', iata: null),
+  GeoCity(id: 'BJ-atlantique_department-abomey_calavi', name: 'Abomey-Calavi', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atlantique_department', iata: null),
+  GeoCity(id: 'BJ-atlantique_department-allada', name: 'Allada', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atlantique_department', iata: null),
+  GeoCity(id: 'BJ-atlantique_department-hinvi', name: 'Hinvi', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atlantique_department', iata: null),
+  GeoCity(id: 'BJ-atlantique_department-hevie', name: 'Hévié', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atlantique_department', iata: null),
+  GeoCity(id: 'BJ-atlantique_department-ouidah', name: 'Ouidah', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-atlantique_department', iata: null),
+  GeoCity(id: 'BJ-borgou_department-bembereke', name: 'Bembèrèkè', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-borgou_department', iata: null),
+  GeoCity(id: 'BJ-borgou_department-beterou', name: 'Bétérou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-borgou_department', iata: null),
+  GeoCity(id: 'BJ-borgou_department-nikki', name: 'Nikki', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-borgou_department', iata: null),
+  GeoCity(id: 'BJ-borgou_department-parakou', name: 'Parakou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-borgou_department', iata: null),
+  GeoCity(id: 'BJ-borgou_department-tchaourou', name: 'Tchaourou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-borgou_department', iata: null),
+  GeoCity(id: 'BJ-collines_department-come', name: 'Comé', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-collines_department', iata: null),
+  GeoCity(id: 'BJ-collines_department-dassa_zoume', name: 'Dassa-Zoumé', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-collines_department', iata: null),
+  GeoCity(id: 'BJ-collines_department-savalou', name: 'Savalou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-collines_department', iata: null),
+  GeoCity(id: 'BJ-collines_department-save', name: 'Savé', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-collines_department', iata: null),
+  GeoCity(id: 'BJ-donga_department-bassila', name: 'Bassila', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-donga_department', iata: null),
+  GeoCity(id: 'BJ-donga_department-commune_of_djougou', name: 'Commune of Djougou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-donga_department', iata: null),
+  GeoCity(id: 'BJ-donga_department-djougou', name: 'Djougou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-donga_department', iata: null),
+  GeoCity(id: 'BJ-kouffo_department-djakotomey', name: 'Djakotomey', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-kouffo_department', iata: null),
+  GeoCity(id: 'BJ-kouffo_department-dogbo', name: 'Dogbo', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-kouffo_department', iata: null),
+  GeoCity(id: 'BJ-littoral_department-cotonou', name: 'Cotonou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-littoral_department', iata: null),
+  GeoCity(id: 'BJ-mono_department-commune_of_athieme', name: 'Commune of Athieme', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-mono_department', iata: null),
+  GeoCity(id: 'BJ-mono_department-lokossa', name: 'Lokossa', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-mono_department', iata: null),
+  GeoCity(id: 'BJ-oueme_department-porto_novo', name: 'Porto-Novo', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-oueme_department', iata: null),
+  GeoCity(id: 'BJ-plateau_department-ketou', name: 'Kétou', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-plateau_department', iata: null),
+  GeoCity(id: 'BJ-plateau_department-pobe', name: 'Pobé', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-plateau_department', iata: null),
+  GeoCity(id: 'BJ-plateau_department-sakete', name: 'Sakété', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-plateau_department', iata: null),
+  GeoCity(id: 'BJ-zou_department-abomey', name: 'Abomey', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-zou_department', iata: null),
+  GeoCity(id: 'BJ-zou_department-bohicon', name: 'Bohicon', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-zou_department', iata: null),
+  GeoCity(id: 'BJ-zou_department-commune_of_agbangnizoun', name: 'Commune of Agbangnizoun', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-zou_department', iata: null),
+  GeoCity(id: 'BJ-zou_department-cove', name: 'Cové', countryIso2: GeoCountryIso2.BJ, stateId: 'BJ-zou_department', iata: null),
+];

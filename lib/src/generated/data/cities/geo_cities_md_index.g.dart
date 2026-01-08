@@ -1,0 +1,43 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// Source: sot/cities/md.json
+//
+// stateId -> indices into [kGeoCities_MD] for fast citiesOfState lookups.
+
+const Map<String, List<int>> kGeoCityIndexByState_MD = <String, List<int>>{
+  'MD-anenii_noi_district': <int>[0, 1],
+  'MD-balti_municipality': <int>[2],
+  'MD-basarabeasca_district': <int>[3],
+  'MD-bender_municipality': <int>[4],
+  'MD-briceni_district': <int>[5],
+  'MD-cahul_district': <int>[6, 7],
+  'MD-calarasi_district': <int>[8],
+  'MD-cantemir_district': <int>[9, 10, 11],
+  'MD-causeni_district': <int>[12, 13],
+  'MD-chisinau_municipality': <int>[14, 15, 16, 17, 18, 19, 20],
+  'MD-cimislia_district': <int>[21],
+  'MD-criuleni_district': <int>[22],
+  'MD-donduseni_district': <int>[23, 24],
+  'MD-drochia_district': <int>[25],
+  'MD-dubasari_district': <int>[26, 27],
+  'MD-edinet_district': <int>[28],
+  'MD-falesti_district': <int>[29],
+  'MD-floresti_district': <int>[30, 31, 32],
+  'MD-gagauzia': <int>[33, 34, 35, 36],
+  'MD-glodeni_district': <int>[37],
+  'MD-hincesti_district': <int>[38, 39],
+  'MD-ialoveni_district': <int>[40],
+  'MD-nisporeni_district': <int>[41],
+  'MD-ocnita_district': <int>[42, 43],
+  'MD-orhei_district': <int>[44],
+  'MD-rezina_district': <int>[45, 46],
+  'MD-riscani_district': <int>[47],
+  'MD-singerei_district': <int>[48, 49, 50],
+  'MD-soldanesti_district': <int>[51],
+  'MD-soroca_district': <int>[52],
+  'MD-stefan_voda_district': <int>[53],
+  'MD-straseni_district': <int>[54, 55],
+  'MD-taraclia_district': <int>[56, 57],
+  'MD-telenesti_district': <int>[58, 59],
+  'MD-transnistria_autonomous_territorial_unit': <int>[60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70],
+  'MD-ungheni_district': <int>[71],
+};

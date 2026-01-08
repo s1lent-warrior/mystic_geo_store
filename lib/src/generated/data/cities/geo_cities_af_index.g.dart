@@ -1,0 +1,40 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// Source: sot/cities/af.json
+//
+// stateId -> indices into [kGeoCities_AF] for fast citiesOfState lookups.
+
+const Map<String, List<int>> kGeoCityIndexByState_AF = <String, List<int>>{
+  'AF-badakhshan': <int>[0, 1, 2, 3, 4, 5],
+  'AF-badghis': <int>[6, 7],
+  'AF-baghlan': <int>[8, 9, 10, 11],
+  'AF-balkh': <int>[12, 13, 14, 15, 16, 17],
+  'AF-bamyan': <int>[18, 19],
+  'AF-daykundi': <int>[20],
+  'AF-farah': <int>[21],
+  'AF-faryab': <int>[22, 23],
+  'AF-ghazni': <int>[24],
+  'AF-ghor': <int>[25, 26],
+  'AF-helmand': <int>[27, 28, 29, 30, 31],
+  'AF-herat': <int>[32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+  'AF-jowzjan': <int>[43, 44, 45, 46],
+  'AF-kabul': <int>[47, 48, 49],
+  'AF-kandahar': <int>[50],
+  'AF-kapisa': <int>[51],
+  'AF-khost': <int>[52],
+  'AF-kunar': <int>[53, 54],
+  'AF-kunduz_province': <int>[55, 56, 57, 58, 59],
+  'AF-laghman': <int>[60],
+  'AF-logar': <int>[61, 62, 63],
+  'AF-nangarhar': <int>[64, 65, 66],
+  'AF-nimruz': <int>[67, 68, 69, 70],
+  'AF-nuristan': <int>[71],
+  'AF-paktia': <int>[72],
+  'AF-paktika': <int>[73, 74, 75],
+  'AF-panjshir': <int>[76],
+  'AF-parwan': <int>[77, 78],
+  'AF-samangan': <int>[79],
+  'AF-sar_e_pol': <int>[80, 81, 82, 83, 84, 85, 86],
+  'AF-takhar': <int>[87, 88],
+  'AF-urozgan': <int>[89, 90],
+  'AF-zabul': <int>[91],
+};

@@ -1,0 +1,46 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// Source: sot/cities/mn.json
+
+import '../../../models/geo_city.dart';
+import '../../../models/geo_country_iso2.dart';
+
+const List<GeoCity> kGeoCities_MN = <GeoCity>[
+  GeoCity(id: 'MN-arkhangai_province-tsetserleg', name: 'Tsetserleg', countryIso2: GeoCountryIso2.MN, stateId: 'MN-arkhangai_province', iata: null),
+  GeoCity(id: 'MN-bayan_olgii_province-altay', name: 'Altay', countryIso2: GeoCountryIso2.MN, stateId: 'MN-bayan_olgii_province', iata: null),
+  GeoCity(id: 'MN-bayan_olgii_province-tsengel', name: 'Tsengel', countryIso2: GeoCountryIso2.MN, stateId: 'MN-bayan_olgii_province', iata: null),
+  GeoCity(id: 'MN-bayan_olgii_province-olgii', name: 'Ölgii', countryIso2: GeoCountryIso2.MN, stateId: 'MN-bayan_olgii_province', iata: null),
+  GeoCity(id: 'MN-bayankhongor_province-bayanhongor', name: 'Bayanhongor', countryIso2: GeoCountryIso2.MN, stateId: 'MN-bayankhongor_province', iata: null),
+  GeoCity(id: 'MN-bulgan_province-bulgan', name: 'Bulgan', countryIso2: GeoCountryIso2.MN, stateId: 'MN-bulgan_province', iata: null),
+  GeoCity(id: 'MN-darkhan_uul_province-darhan', name: 'Darhan', countryIso2: GeoCountryIso2.MN, stateId: 'MN-darkhan_uul_province', iata: null),
+  GeoCity(id: 'MN-dornod_province-choibalsan', name: 'Choibalsan', countryIso2: GeoCountryIso2.MN, stateId: 'MN-dornod_province', iata: null),
+  GeoCity(id: 'MN-dornod_province-ereencav', name: 'Ereencav', countryIso2: GeoCountryIso2.MN, stateId: 'MN-dornod_province', iata: null),
+  GeoCity(id: 'MN-dundgovi_province-mandalgovi', name: 'Mandalgovi', countryIso2: GeoCountryIso2.MN, stateId: 'MN-dundgovi_province', iata: null),
+  GeoCity(id: 'MN-govi_altai_province-altai', name: 'Altai', countryIso2: GeoCountryIso2.MN, stateId: 'MN-govi_altai_province', iata: null),
+  GeoCity(id: 'MN-govisumber_province-choyr', name: 'Choyr', countryIso2: GeoCountryIso2.MN, stateId: 'MN-govisumber_province', iata: null),
+  GeoCity(id: 'MN-khentii_province-undurkhaan', name: 'Undurkhaan', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khentii_province', iata: null),
+  GeoCity(id: 'MN-khovd_province-khovd', name: 'Khovd', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khovd_province', iata: null),
+  GeoCity(id: 'MN-khovd_province-most', name: 'Möst', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khovd_province', iata: null),
+  GeoCity(id: 'MN-khovd_province-uyonch', name: 'Üyönch', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khovd_province', iata: null),
+  GeoCity(id: 'MN-khovsgol_province-hanh', name: 'Hanh', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khovsgol_province', iata: null),
+  GeoCity(id: 'MN-khovsgol_province-murun_kuren', name: 'Murun-kuren', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khovsgol_province', iata: null),
+  GeoCity(id: 'MN-khovsgol_province-tsengel', name: 'Tsengel', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khovsgol_province', iata: null),
+  GeoCity(id: 'MN-khovsgol_province-turt', name: 'Turt', countryIso2: GeoCountryIso2.MN, stateId: 'MN-khovsgol_province', iata: null),
+  GeoCity(id: 'MN-omnogovi_province-dalandzadgad', name: 'Dalandzadgad', countryIso2: GeoCountryIso2.MN, stateId: 'MN-omnogovi_province', iata: null),
+  GeoCity(id: 'MN-omnogovi_province-hanhongor', name: 'Hanhongor', countryIso2: GeoCountryIso2.MN, stateId: 'MN-omnogovi_province', iata: null),
+  GeoCity(id: 'MN-omnogovi_province-nomgon_sum', name: 'Nomgon Sum', countryIso2: GeoCountryIso2.MN, stateId: 'MN-omnogovi_province', iata: null),
+  GeoCity(id: 'MN-orkhon_province-erdenet', name: 'Erdenet', countryIso2: GeoCountryIso2.MN, stateId: 'MN-orkhon_province', iata: null),
+  GeoCity(id: 'MN-ovorkhangai_province-arvayheer', name: 'Arvayheer', countryIso2: GeoCountryIso2.MN, stateId: 'MN-ovorkhangai_province', iata: null),
+  GeoCity(id: 'MN-ovorkhangai_province-harhorin', name: 'Harhorin', countryIso2: GeoCountryIso2.MN, stateId: 'MN-ovorkhangai_province', iata: null),
+  GeoCity(id: 'MN-ovorkhangai_province-hovd', name: 'Hovd', countryIso2: GeoCountryIso2.MN, stateId: 'MN-ovorkhangai_province', iata: null),
+  GeoCity(id: 'MN-ovorkhangai_province-kharkhorin', name: 'Kharkhorin', countryIso2: GeoCountryIso2.MN, stateId: 'MN-ovorkhangai_province', iata: null),
+  GeoCity(id: 'MN-ovorkhangai_province-nariynteel', name: 'Nariynteel', countryIso2: GeoCountryIso2.MN, stateId: 'MN-ovorkhangai_province', iata: null),
+  GeoCity(id: 'MN-selenge_province-dzuunharaa', name: 'Dzüünharaa', countryIso2: GeoCountryIso2.MN, stateId: 'MN-selenge_province', iata: null),
+  GeoCity(id: 'MN-selenge_province-suhbaatar', name: 'Sühbaatar', countryIso2: GeoCountryIso2.MN, stateId: 'MN-selenge_province', iata: null),
+  GeoCity(id: 'MN-sukhbaatar_province-baruun_urt', name: 'Baruun-Urt', countryIso2: GeoCountryIso2.MN, stateId: 'MN-sukhbaatar_province', iata: null),
+  GeoCity(id: 'MN-tov_province-dzuunmod', name: 'Dzuunmod', countryIso2: GeoCountryIso2.MN, stateId: 'MN-tov_province', iata: null),
+  GeoCity(id: 'MN-tov_province-mongonmorit', name: 'Möngönmorĭt', countryIso2: GeoCountryIso2.MN, stateId: 'MN-tov_province', iata: null),
+  GeoCity(id: 'MN-tov_province-ulaanhudag', name: 'Ulaanhudag', countryIso2: GeoCountryIso2.MN, stateId: 'MN-tov_province', iata: null),
+  GeoCity(id: 'MN-tov_province-x', name: 'Зуунмод', countryIso2: GeoCountryIso2.MN, stateId: 'MN-tov_province', iata: null),
+  GeoCity(id: 'MN-uvs_province-ulaangom', name: 'Ulaangom', countryIso2: GeoCountryIso2.MN, stateId: 'MN-uvs_province', iata: null),
+  GeoCity(id: 'MN-zavkhan_province-uliastay', name: 'Uliastay', countryIso2: GeoCountryIso2.MN, stateId: 'MN-zavkhan_province', iata: null),
+];

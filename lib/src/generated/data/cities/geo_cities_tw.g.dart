@@ -1,0 +1,48 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// Source: sot/cities/tw.json
+
+import '../../../models/geo_city.dart';
+import '../../../models/geo_country_iso2.dart';
+
+const List<GeoCity> kGeoCities_TW = <GeoCity>[
+  GeoCity(id: 'TW-changhua_county-changhua', name: 'Changhua', countryIso2: GeoCountryIso2.TW, stateId: 'TW-changhua_county', iata: null),
+  GeoCity(id: 'TW-changhua_county-yuanlin', name: 'Yuanlin', countryIso2: GeoCountryIso2.TW, stateId: 'TW-changhua_county', iata: null),
+  GeoCity(id: 'TW-chiayi_city-chiayi_county', name: 'Chiayi County', countryIso2: GeoCountryIso2.TW, stateId: 'TW-chiayi_city', iata: null),
+  GeoCity(id: 'TW-chiayi_county-chiayi', name: 'Chiayi', countryIso2: GeoCountryIso2.TW, stateId: 'TW-chiayi_county', iata: null),
+  GeoCity(id: 'TW-chiayi_county-pizitou', name: 'Pizitou', countryIso2: GeoCountryIso2.TW, stateId: 'TW-chiayi_county', iata: null),
+  GeoCity(id: 'TW-hsinchu-hsinchu_county', name: 'Hsinchu County', countryIso2: GeoCountryIso2.TW, stateId: 'TW-hsinchu', iata: null),
+  GeoCity(id: 'TW-hsinchu_county-hsinchu', name: 'Hsinchu', countryIso2: GeoCountryIso2.TW, stateId: 'TW-hsinchu_county', iata: null),
+  GeoCity(id: 'TW-hualien_county-hualien', name: 'Hualien', countryIso2: GeoCountryIso2.TW, stateId: 'TW-hualien_county', iata: null),
+  GeoCity(id: 'TW-hualien_county-hualien_city', name: 'Hualien City', countryIso2: GeoCountryIso2.TW, stateId: 'TW-hualien_county', iata: null),
+  GeoCity(id: 'TW-kaohsiung-kaohsiung', name: 'Kaohsiung', countryIso2: GeoCountryIso2.TW, stateId: 'TW-kaohsiung', iata: null),
+  GeoCity(id: 'TW-kinmen-jincheng', name: 'Jincheng', countryIso2: GeoCountryIso2.TW, stateId: 'TW-kinmen', iata: null),
+  GeoCity(id: 'TW-kinmen-kinmen_county', name: 'Kinmen County', countryIso2: GeoCountryIso2.TW, stateId: 'TW-kinmen', iata: null),
+  GeoCity(id: 'TW-lienchiang_county-lienchiang', name: 'Lienchiang', countryIso2: GeoCountryIso2.TW, stateId: 'TW-lienchiang_county', iata: null),
+  GeoCity(id: 'TW-lienchiang_county-nangan', name: 'Nangan', countryIso2: GeoCountryIso2.TW, stateId: 'TW-lienchiang_county', iata: null),
+  GeoCity(id: 'TW-miaoli_county-miaoli', name: 'Miaoli', countryIso2: GeoCountryIso2.TW, stateId: 'TW-miaoli_county', iata: null),
+  GeoCity(id: 'TW-nantou_county-lugu', name: 'Lugu', countryIso2: GeoCountryIso2.TW, stateId: 'TW-nantou_county', iata: null),
+  GeoCity(id: 'TW-nantou_county-nantou', name: 'Nantou', countryIso2: GeoCountryIso2.TW, stateId: 'TW-nantou_county', iata: null),
+  GeoCity(id: 'TW-nantou_county-puli', name: 'Puli', countryIso2: GeoCountryIso2.TW, stateId: 'TW-nantou_county', iata: null),
+  GeoCity(id: 'TW-nantou_county-zhongxing_new_village', name: 'Zhongxing New Village', countryIso2: GeoCountryIso2.TW, stateId: 'TW-nantou_county', iata: null),
+  GeoCity(id: 'TW-penghu_county-magong', name: 'Magong', countryIso2: GeoCountryIso2.TW, stateId: 'TW-penghu_county', iata: null),
+  GeoCity(id: 'TW-penghu_county-penghu_county', name: 'Penghu County', countryIso2: GeoCountryIso2.TW, stateId: 'TW-penghu_county', iata: null),
+  GeoCity(id: 'TW-pingtung_county-donggang', name: 'Donggang', countryIso2: GeoCountryIso2.TW, stateId: 'TW-pingtung_county', iata: null),
+  GeoCity(id: 'TW-pingtung_county-hengchun', name: 'Hengchun', countryIso2: GeoCountryIso2.TW, stateId: 'TW-pingtung_county', iata: null),
+  GeoCity(id: 'TW-pingtung_county-pingtung', name: 'Pingtung', countryIso2: GeoCountryIso2.TW, stateId: 'TW-pingtung_county', iata: null),
+  GeoCity(id: 'TW-taichung-taichung', name: 'Taichung', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taichung', iata: null),
+  GeoCity(id: 'TW-taichung-taichung_city', name: 'Taichung City', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taichung', iata: null),
+  GeoCity(id: 'TW-tainan-tainan', name: 'Tainan', countryIso2: GeoCountryIso2.TW, stateId: 'TW-tainan', iata: null),
+  GeoCity(id: 'TW-tainan-yujing', name: 'Yujing', countryIso2: GeoCountryIso2.TW, stateId: 'TW-tainan', iata: null),
+  GeoCity(id: 'TW-taipei-banqiao', name: 'Banqiao', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taipei', iata: null),
+  GeoCity(id: 'TW-taipei-jiufen', name: 'Jiufen', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taipei', iata: null),
+  GeoCity(id: 'TW-taipei-taipei', name: 'Taipei', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taipei', iata: null),
+  GeoCity(id: 'TW-taipei-taipei_city', name: 'Taipei City', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taipei', iata: null),
+  GeoCity(id: 'TW-taitung_county-taitung', name: 'Taitung', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taitung_county', iata: null),
+  GeoCity(id: 'TW-taitung_county-taitung_city', name: 'Taitung City', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taitung_county', iata: null),
+  GeoCity(id: 'TW-taoyuan_city-daxi', name: 'Daxi', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taoyuan_city', iata: null),
+  GeoCity(id: 'TW-taoyuan_city-taoyuan', name: 'Taoyuan', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taoyuan_city', iata: null),
+  GeoCity(id: 'TW-taoyuan_city-taoyuan_city', name: 'Taoyuan City', countryIso2: GeoCountryIso2.TW, stateId: 'TW-taoyuan_city', iata: null),
+  GeoCity(id: 'TW-yilan_county-yilan', name: 'Yilan', countryIso2: GeoCountryIso2.TW, stateId: 'TW-yilan_county', iata: null),
+  GeoCity(id: 'TW-yunlin_county-douliu', name: 'Douliu', countryIso2: GeoCountryIso2.TW, stateId: 'TW-yunlin_county', iata: null),
+  GeoCity(id: 'TW-yunlin_county-yunlin', name: 'Yunlin', countryIso2: GeoCountryIso2.TW, stateId: 'TW-yunlin_county', iata: null),
+];
