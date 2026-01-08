@@ -1,4 +1,4 @@
-export 'src/api/geo_data.dart';
+export 'src/api/geo_store.dart';
 export 'src/api/geo_search.dart';
 export 'src/api/geo_country_iso2_extensions.dart';
 

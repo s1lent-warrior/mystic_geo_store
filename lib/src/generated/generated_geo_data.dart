@@ -1,5 +1,5 @@
 import '../api/geo_search.dart';
-import '../api/geo_data.dart';
+import '../api/geo_store.dart';
 import '../models/geo_city.dart';
 import '../models/geo_country.dart';
 import '../models/geo_country_iso2.dart';
@@ -16,12 +16,12 @@ import 'data/states/geo_states_index.g.dart';
 import 'data/states/geo_states_lookup.g.dart';
 import 'data/cities/geo_cities_index.g.dart';
 
-/// Generated implementation of [GeoData] backed by const tables.
+/// Generated implementation of [GeoStore] backed by const tables.
 ///
 /// This file is small and hand-maintained; the heavy datasets live under
 /// `lib/src/generated/data/**` and are regenerated from the SoT dataset.
-class GeneratedGeoData implements GeoData {
-  const GeneratedGeoData();
+class GeneratedGeoStore implements GeoStore {
+  const GeneratedGeoStore();
 
   @override
   List<GeoCountry> get countries => kGeoCountries;
@@ -55,7 +55,8 @@ class GeneratedGeoData implements GeoData {
       final name = geoNormalizeSearch(c.name);
       final hit = switch (fields) {
         GeoCountrySearchField.nameOnly => name.contains(q),
-        GeoCountrySearchField.nameAndIso2 => name.contains(q) || c.iso2.code.contains(qIso),
+        GeoCountrySearchField.nameAndIso2 =>
+          name.contains(q) || c.iso2.code.contains(qIso),
       };
       if (hit) out.add(c);
     }
@@ -207,7 +208,8 @@ class GeneratedGeoData implements GeoData {
 
       final hit = switch (fields) {
         GeoCurrencySearchField.codeOnly => code.contains(qCode),
-        GeoCurrencySearchField.codeAndName => code.contains(qCode) || name.contains(q),
+        GeoCurrencySearchField.codeAndName =>
+          code.contains(qCode) || name.contains(q),
         GeoCurrencySearchField.codeNameSymbol =>
           code.contains(qCode) || name.contains(q) || sym.contains(q),
       };
@@ -252,7 +254,9 @@ class GeneratedGeoData implements GeoData {
       final nameHit = countryName.contains(q);
       final dialHit = e.dialCodes.any((d) {
         final dn = d.replaceAll('+', '');
-        return d.contains(qRaw) || dn.startsWith(qNoPlus) || dn.contains(qNoPlus);
+        return d.contains(qRaw) ||
+            dn.startsWith(qNoPlus) ||
+            dn.contains(qNoPlus);
       });
 
       if (isoHit || nameHit || dialHit) out.add(e);
