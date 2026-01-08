@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+Rename GeoData to GeoStore.
+
 ## 1.0.0
 
 Initial release of `mystic_geo_store` — a compile-time generated geo metadata store for Dart and Flutter.
