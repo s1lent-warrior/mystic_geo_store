@@ -261,7 +261,8 @@ apps.
 ## Source of Truth (SoT)
 
 This package does **not** bundle the raw JSON datasets (countries, states, cities,
-currencies, dial codes).
+currencies, dial codes). The dataset can be found at: 
+[https://github.com/s1lent-warrior/mystic_geo_store_sot](https://github.com/s1lent-warrior/mystic_geo_store_sot)
 
 Instead:
 
@@ -282,8 +283,8 @@ If you are interested in the SoT format or regeneration process, see the
 
 ## Code generation
 
-`mystic_geo_store` includes a generator tool that converts raw geo datasets
-(JSON) into Dart source files.
+`mystic_geo_store` includes a generator tool that converts [raw geo datasets
+(JSON)](https://github.com/s1lent-warrior/mystic_geo_store_sot) into Dart source files.
 
 The generator is intended for **maintainers and contributors**, not for
 runtime use.
