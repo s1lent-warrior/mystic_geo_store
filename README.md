@@ -88,7 +88,7 @@ dart pub get
 ### Importing the library
 
 ```dart
-import 'package:geo_data/geo_data.dart';
+import 'package:mystic_geo_store/mystic_geo_store.dart';
 ```
 
 ### Accessing the singleton datasource
@@ -230,7 +230,8 @@ Typical usage:
 ```bash
 dart run tool/generate.dart \
   --input geo_sot_files.zip \
-  --out lib
+  --out lib \
+  --emit-models
 ```
 
 The generator supports:
@@ -290,7 +291,8 @@ runtime use.
 ```bash
 dart run tool/generate.dart \
   --input geo_sot_files.zip \
-  --out lib
+  --out lib \
+  --emit-models
 ````
 
 Notes:
