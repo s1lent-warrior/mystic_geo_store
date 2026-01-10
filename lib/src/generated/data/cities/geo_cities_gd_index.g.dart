@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/gd.json
-//
-// stateId -> indices into [kGeoCities_GD] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GD = <String, List<int>>{
   'GD-carriacou_and_petite_martinique': <int>[0],

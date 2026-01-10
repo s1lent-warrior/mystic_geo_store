@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/mu.json
-//
-// stateId -> indices into [kGeoCities_MU] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MU = <String, List<int>>{
   'MU-agalega': <int>[0],

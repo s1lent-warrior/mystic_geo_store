@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/lt.json
-//
-// stateId -> indices into [kGeoCities_LT] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LT = <String, List<int>>{
   'LT-alytus_city_municipality': <int>[0, 1, 2, 3, 4, 5, 6],

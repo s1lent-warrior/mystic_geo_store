@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/cl.json
-//
-// stateId -> indices into [kGeoCities_CL] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_CL = <String, List<int>>{
   'CL-antofagasta_region': <int>[0, 1, 2, 3, 4, 5, 6, 7],

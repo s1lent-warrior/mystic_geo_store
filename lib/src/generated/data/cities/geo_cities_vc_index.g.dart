@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/vc.json
-//
-// stateId -> indices into [kGeoCities_VC] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_VC = <String, List<int>>{
   'VC-charlotte_parish': <int>[0, 1, 2],

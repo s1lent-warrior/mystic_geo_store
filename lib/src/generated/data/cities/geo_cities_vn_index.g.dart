@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/vn.json
-//
-// stateId -> indices into [kGeoCities_VN] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_VN = <String, List<int>>{
   'VN-ak_lak': <int>[0, 1, 2, 3],

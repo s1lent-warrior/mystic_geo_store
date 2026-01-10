@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/dm.json
-//
-// stateId -> indices into [kGeoCities_DM] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_DM = <String, List<int>>{
   'DM-saint_andrew_parish': <int>[0, 1, 2, 3],

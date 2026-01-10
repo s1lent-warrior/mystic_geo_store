@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ir.json
-//
-// stateId -> indices into [kGeoCities_IR] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_IR = <String, List<int>>{
   'IR-alborz_province': <int>[0, 1, 2, 3, 4, 5, 6],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ad.json
-//
-// stateId -> indices into [kGeoCities_AD] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_AD = <String, List<int>>{
   'AD-andorra_la_vella': <int>[0],

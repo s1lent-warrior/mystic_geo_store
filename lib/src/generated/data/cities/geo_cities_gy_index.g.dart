@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/gy.json
-//
-// stateId -> indices into [kGeoCities_GY] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GY = <String, List<int>>{
   'GY-barima_waini': <int>[0],

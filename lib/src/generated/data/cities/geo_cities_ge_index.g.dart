@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ge.json
-//
-// stateId -> indices into [kGeoCities_GE] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GE = <String, List<int>>{
   'GE-adjara': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],

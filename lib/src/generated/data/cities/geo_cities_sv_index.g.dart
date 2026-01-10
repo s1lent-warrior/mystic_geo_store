@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sv.json
-//
-// stateId -> indices into [kGeoCities_SV] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SV = <String, List<int>>{
   'SV-ahuachapan_department': <int>[0, 1, 2, 3, 4, 5, 6],

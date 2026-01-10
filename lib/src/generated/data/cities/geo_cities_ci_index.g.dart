@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ci.json
-//
-// stateId -> indices into [kGeoCities_CI] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_CI = <String, List<int>>{
   'CI-abidjan': <int>[0, 1, 2, 3],

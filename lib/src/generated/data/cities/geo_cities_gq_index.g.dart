@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/gq.json
-//
-// stateId -> indices into [kGeoCities_GQ] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GQ = <String, List<int>>{
   'GQ-annobon_province': <int>[0],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/tm.json
-//
-// stateId -> indices into [kGeoCities_TM] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TM = <String, List<int>>{
   'TM-ahal_region': <int>[0, 1, 2, 3, 4, 5],

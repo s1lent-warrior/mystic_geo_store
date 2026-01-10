@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/lb.json
-//
-// stateId -> indices into [kGeoCities_LB] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LB = <String, List<int>>{
   'LB-akkar_governorate': <int>[0],

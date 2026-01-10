@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/tl.json
-//
-// stateId -> indices into [kGeoCities_TL] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TL = <String, List<int>>{
   'TL-aileu_municipality': <int>[0, 1, 2],

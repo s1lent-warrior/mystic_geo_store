@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/zw.json
-//
-// stateId -> indices into [kGeoCities_ZW] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_ZW = <String, List<int>>{
   'ZW-bulawayo_province': <int>[0],

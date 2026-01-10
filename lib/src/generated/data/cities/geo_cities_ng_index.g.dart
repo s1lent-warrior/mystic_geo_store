@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ng.json
-//
-// stateId -> indices into [kGeoCities_NG] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_NG = <String, List<int>>{
   'NG-abia_state': <int>[0, 1, 2, 3, 4, 5],

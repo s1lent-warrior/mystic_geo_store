@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/cv.json
-//
-// stateId -> indices into [kGeoCities_CV] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_CV = <String, List<int>>{
   'CV-boa_vista': <int>[0],

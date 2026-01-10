@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ml.json
-//
-// stateId -> indices into [kGeoCities_ML] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_ML = <String, List<int>>{
   'ML-bamako': <int>[0],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/la.json
-//
-// stateId -> indices into [kGeoCities_LA] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LA = <String, List<int>>{
   'LA-attapeu_province': <int>[0, 1, 2, 3, 4, 5],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ke.json
-//
-// stateId -> indices into [kGeoCities_KE] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_KE = <String, List<int>>{
   'KE-baringo_county': <int>[0, 1, 2],

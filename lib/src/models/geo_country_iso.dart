@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/countries.json
 
+// ignore_for_file: constant_identifier_names
+
 /// ISO 3166-1 alpha-2 country codes.
 ///
 /// Enum cases are uppercase (e.g. `PK`, `US`) to avoid collisions with Dart keywords.
-///
-/// This file is generated from the SoT dataset.
-enum GeoCountryIso2 {
+enum GeoCountryIso {
   /// Andorra (AD)
   AD,
 
@@ -759,23 +759,22 @@ enum GeoCountryIso2 {
 
   ;
 
-  /// ISO2 string code, e.g. "PK".
+  /// ISO string code, e.g. "PK".
   String get code => name;
 
-  /// Parses [code] into a [GeoCountryIso2].
+  /// Parses [code] into a [GeoCountryIso].
   ///
-  /// Trims and uppercases the input, then resolves via [GeoCountryIso2.values.byName].
+  /// Trims and uppercases the input, then resolves via [GeoCountryIso.values.byName].
   /// Throws [ArgumentError] if the code is invalid.
-  factory GeoCountryIso2.withCode(String code) => GeoCountryIso2._fromCode(code);
+  factory GeoCountryIso.withCode(String code) => GeoCountryIso._fromCode(code);
 
   /// Internal parsing factory.
-  factory GeoCountryIso2._fromCode(String code) {
+  factory GeoCountryIso._fromCode(String code) {
     final normalized = code.trim().toUpperCase();
     try {
-      return GeoCountryIso2.values.byName(normalized);
+      return GeoCountryIso.values.byName(normalized);
     } catch (_) {
-      throw ArgumentError.value(code, 'code', 'Invalid ISO2 country code');
+      throw ArgumentError.value(code, 'code', 'Invalid ISO country code');
     }
   }
-
 }

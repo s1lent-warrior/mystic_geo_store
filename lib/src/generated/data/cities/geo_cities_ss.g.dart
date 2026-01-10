@@ -2,8 +2,8 @@
 // Source: sot/cities/ss.json
 
 import '../../../models/geo_city.dart';
-import '../../../models/geo_country_iso2.dart';
+import '../../../models/geo_country_iso.dart';
 
 const List<GeoCity> kGeoCities_SS = <GeoCity>[
-  GeoCity(id: 'SS-lakes-yirol', name: 'Yirol', countryIso2: GeoCountryIso2.SS, stateId: 'SS-lakes', iata: null),
+  GeoCity(id: 'SS-lakes-yirol', name: 'Yirol', countryIso: GeoCountryIso.SS, stateId: 'SS-lakes', iata: null),
 ];

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sz.json
-//
-// stateId -> indices into [kGeoCities_SZ] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SZ = <String, List<int>>{
   'SZ-hhohho_district': <int>[0, 1, 2, 3, 4, 5],

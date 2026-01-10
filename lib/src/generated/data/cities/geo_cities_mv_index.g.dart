@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/mv.json
-//
-// stateId -> indices into [kGeoCities_MV] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MV = <String, List<int>>{
   'MV-addu_atoll': <int>[0, 1],

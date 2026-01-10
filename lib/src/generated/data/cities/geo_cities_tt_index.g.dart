@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/tt.json
-//
-// stateId -> indices into [kGeoCities_TT] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TT = <String, List<int>>{
   'TT-arima': <int>[0],

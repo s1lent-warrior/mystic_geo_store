@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/bz.json
-//
-// stateId -> indices into [kGeoCities_BZ] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_BZ = <String, List<int>>{
   'BZ-belize_district': <int>[0, 1],

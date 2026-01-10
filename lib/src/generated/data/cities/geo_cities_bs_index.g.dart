@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/bs.json
-//
-// stateId -> indices into [kGeoCities_BS] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_BS = <String, List<int>>{
   'BS-bimini': <int>[0],

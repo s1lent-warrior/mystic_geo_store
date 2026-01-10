@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sa.json
-//
-// stateId -> indices into [kGeoCities_SA] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SA = <String, List<int>>{
   'SA-al_bahah_region': <int>[0, 1],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/mt.json
-//
-// stateId -> indices into [kGeoCities_MT] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MT = <String, List<int>>{
   'MT-amrun': <int>[0],

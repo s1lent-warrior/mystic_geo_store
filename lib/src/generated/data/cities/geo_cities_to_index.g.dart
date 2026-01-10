@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/to.json
-//
-// stateId -> indices into [kGeoCities_TO] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TO = <String, List<int>>{
   'TO-eua': <int>[0],

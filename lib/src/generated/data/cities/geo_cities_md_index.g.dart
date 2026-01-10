@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/md.json
-//
-// stateId -> indices into [kGeoCities_MD] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MD = <String, List<int>>{
   'MD-anenii_noi_district': <int>[0, 1],

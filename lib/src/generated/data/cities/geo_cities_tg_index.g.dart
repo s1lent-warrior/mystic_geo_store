@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/tg.json
-//
-// stateId -> indices into [kGeoCities_TG] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TG = <String, List<int>>{
   'TG-centrale_region': <int>[0, 1, 2],

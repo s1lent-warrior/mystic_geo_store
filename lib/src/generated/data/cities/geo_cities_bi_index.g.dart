@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/bi.json
-//
-// stateId -> indices into [kGeoCities_BI] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_BI = <String, List<int>>{
   'BI-bubanza_province': <int>[0],

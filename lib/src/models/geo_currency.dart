@@ -1,6 +1,9 @@
-/// A currency (ISO 4217) record intended for UI pickers.
+import 'package:meta/meta.dart';
+
+/// Currency entry (ISO 4217) for pickers.
 ///
-/// Instances are generated as compile-time constants from the SoT dataset.
+/// [code] is the canonical identifier (e.g. "USD").
+@immutable
 class GeoCurrency {
   const GeoCurrency({
     required this.code,
@@ -8,12 +11,7 @@ class GeoCurrency {
     this.symbol,
   });
 
-  /// ISO 4217 currency code (e.g., "USD").
   final String code;
-
-  /// English currency name.
   final String name;
-
-  /// Common currency symbol (may be null).
   final String? symbol;
 }

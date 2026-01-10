@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sy.json
-//
-// stateId -> indices into [kGeoCities_SY] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SY = <String, List<int>>{
   'SY-al_hasakah_governorate': <int>[0, 1, 2, 3, 4, 5],

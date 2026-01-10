@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/li.json
-//
-// stateId -> indices into [kGeoCities_LI] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LI = <String, List<int>>{
   'LI-balzers': <int>[0],

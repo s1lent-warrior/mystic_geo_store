@@ -1,22 +1,37 @@
-import 'geo_country_iso2.dart';
+import 'package:meta/meta.dart';
 
-/// A country entry intended for UI pickers and lightweight metadata usage.
+import 'geo_country_iso.dart';
+
+/// Represents a country/territory entry suitable for UI pickers and lightweight
+/// geo-metadata lookups.
 ///
-/// Instances are generated as compile-time constants from the SoT dataset.
+/// Instances are generated as compile-time constants from the SoT.
+///
+/// Nullability contract:
+/// - strict: [currencyCode] and [dialCode] are non-nullable and generation fails if missing
+/// - lenient (`--lenient`): [currencyCode] and [dialCode] are nullable
+@immutable
 class GeoCountry {
-  /// Creates an immutable country model.
   const GeoCountry({
-    required this.iso2,
+    required this.iso,
     required this.name,
-    required this.emoji,
+    required this.flag,
+    required this.currencyCode,
+    required this.dialCode,
   });
 
-  /// ISO 3166-1 alpha-2 code (e.g., [GeoCountryIso2.PK]).
-  final GeoCountryIso2 iso2;
+  /// ISO 3166-1 alpha-2 country code as an enum.
+  final GeoCountryIso iso;
 
-  /// English display name.
+  /// English display name (picker-friendly).
   final String name;
 
-  /// Flag emoji for the country.
-  final String emoji;
+  /// Flag emoji (may be empty).
+  final String flag;
+
+  /// ISO 4217 currency code (e.g. "USD").
+  final String currencyCode;
+
+  /// Primary E.164 dial code (e.g. "+92").
+  final String dialCode;
 }

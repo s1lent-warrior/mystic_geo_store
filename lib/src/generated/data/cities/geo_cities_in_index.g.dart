@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/in.json
-//
-// stateId -> indices into [kGeoCities_IN] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_IN = <String, List<int>>{
   'IN-andaman_and_nicobar_islands': <int>[0, 1, 2, 3],

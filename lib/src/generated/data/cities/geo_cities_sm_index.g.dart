@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sm.json
-//
-// stateId -> indices into [kGeoCities_SM] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SM = <String, List<int>>{
   'SM-acquaviva': <int>[0],

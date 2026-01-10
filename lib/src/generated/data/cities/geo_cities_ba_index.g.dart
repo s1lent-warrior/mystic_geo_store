@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ba.json
-//
-// stateId -> indices into [kGeoCities_BA] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_BA = <String, List<int>>{
   'BA-brcko_district': <int>[0, 1],

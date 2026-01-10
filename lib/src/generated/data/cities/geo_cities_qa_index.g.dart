@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/qa.json
-//
-// stateId -> indices into [kGeoCities_QA] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_QA = <String, List<int>>{
   'QA-al_khor': <int>[0, 1],

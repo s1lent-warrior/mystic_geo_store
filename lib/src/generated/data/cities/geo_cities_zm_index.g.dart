@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/zm.json
-//
-// stateId -> indices into [kGeoCities_ZM] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_ZM = <String, List<int>>{
   'ZM-central_province': <int>[0, 1, 2, 3, 4, 5, 6],

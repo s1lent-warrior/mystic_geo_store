@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/az.json
-//
-// stateId -> indices into [kGeoCities_AZ] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_AZ = <String, List<int>>{
   'AZ-absheron_district': <int>[0, 1, 2, 3, 4, 5],

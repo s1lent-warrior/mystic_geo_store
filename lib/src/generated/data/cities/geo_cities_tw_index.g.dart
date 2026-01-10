@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/tw.json
-//
-// stateId -> indices into [kGeoCities_TW] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TW = <String, List<int>>{
   'TW-changhua_county': <int>[0, 1],

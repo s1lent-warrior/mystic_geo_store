@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/kh.json
-//
-// stateId -> indices into [kGeoCities_KH] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_KH = <String, List<int>>{
   'KH-banteay_meanchey_province': <int>[0, 1, 2, 3, 4],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/gh.json
-//
-// stateId -> indices into [kGeoCities_GH] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GH = <String, List<int>>{
   'GH-ashanti_region': <int>[0, 1, 2, 3, 4, 5, 6, 7],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/lc.json
-//
-// stateId -> indices into [kGeoCities_LC] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LC = <String, List<int>>{
   'LC-anse_la_raye_quarter': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],

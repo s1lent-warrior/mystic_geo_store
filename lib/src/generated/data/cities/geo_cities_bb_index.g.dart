@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/bb.json
-//
-// stateId -> indices into [kGeoCities_BB] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_BB = <String, List<int>>{
   'BB-christ_church': <int>[0],

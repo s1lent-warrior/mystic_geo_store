@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/dz.json
-//
-// stateId -> indices into [kGeoCities_DZ] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_DZ = <String, List<int>>{
   'DZ-adrar_province': <int>[0, 1, 2, 3],

@@ -1,15 +1,17 @@
-import 'geo_country_iso2.dart';
+import 'package:meta/meta.dart';
 
-/// Dialing prefixes for a country (E.164).
+import 'geo_country_iso.dart';
+
+/// Primary E.164 calling code for a country.
 ///
-/// Some countries/territories may have multiple prefixes, hence [dialCodes]
-/// is a list.
+/// [dialCode] always includes a leading '+'.
+@immutable
 class GeoDialCodeEntry {
   const GeoDialCodeEntry({
-    required this.countryIso2,
-    required this.dialCodes,
+    required this.countryIso,
+    required this.dialCode,
   });
 
-  final GeoCountryIso2 countryIso2;
-  final List<String> dialCodes;
+  final GeoCountryIso countryIso;
+  final String dialCode;
 }

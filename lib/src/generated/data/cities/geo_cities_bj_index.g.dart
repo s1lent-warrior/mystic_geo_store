@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/bj.json
-//
-// stateId -> indices into [kGeoCities_BJ] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_BJ = <String, List<int>>{
   'BJ-alibori_department': <int>[0, 1, 2],

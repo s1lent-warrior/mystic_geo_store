@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/gn.json
-//
-// stateId -> indices into [kGeoCities_GN] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GN = <String, List<int>>{
   'GN-boke_region': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],

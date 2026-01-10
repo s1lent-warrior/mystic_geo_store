@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ls.json
-//
-// stateId -> indices into [kGeoCities_LS] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LS = <String, List<int>>{
   'LS-berea_district': <int>[0],

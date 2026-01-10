@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/np.json
-//
-// stateId -> indices into [kGeoCities_NP] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_NP = <String, List<int>>{
   'NP-central_region': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],

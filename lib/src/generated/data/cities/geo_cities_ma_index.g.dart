@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ma.json
-//
-// stateId -> indices into [kGeoCities_MA] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MA = <String, List<int>>{
   'MA-assa_zag_province': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],

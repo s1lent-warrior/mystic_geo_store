@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/mn.json
-//
-// stateId -> indices into [kGeoCities_MN] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MN = <String, List<int>>{
   'MN-arkhangai_province': <int>[0],

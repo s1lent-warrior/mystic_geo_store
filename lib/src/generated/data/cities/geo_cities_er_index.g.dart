@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/er.json
-//
-// stateId -> indices into [kGeoCities_ER] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_ER = <String, List<int>>{
   'ER-anseba_region': <int>[0],

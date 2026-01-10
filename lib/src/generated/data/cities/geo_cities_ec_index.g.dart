@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ec.json
-//
-// stateId -> indices into [kGeoCities_EC] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_EC = <String, List<int>>{
   'EC-azuay_province': <int>[0, 1, 2, 3, 4, 5],

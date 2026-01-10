@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/is.json
-//
-// stateId -> indices into [kGeoCities_IS] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_IS = <String, List<int>>{
   'IS-capital_region': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8],

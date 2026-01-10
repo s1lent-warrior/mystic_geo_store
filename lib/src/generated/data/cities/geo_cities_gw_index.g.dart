@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/gw.json
-//
-// stateId -> indices into [kGeoCities_GW] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GW = <String, List<int>>{
   'GW-bafata': <int>[0, 1],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sc.json
-//
-// stateId -> indices into [kGeoCities_SC] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SC = <String, List<int>>{
   'SC-anse_boileau': <int>[0],

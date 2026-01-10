@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ar.json
-//
-// stateId -> indices into [kGeoCities_AR] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_AR = <String, List<int>>{
   'AR-buenos_aires_province': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/et.json
-//
-// stateId -> indices into [kGeoCities_ET] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_ET = <String, List<int>>{
   'ET-addis_ababa': <int>[0],

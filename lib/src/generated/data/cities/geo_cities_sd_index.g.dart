@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sd.json
-//
-// stateId -> indices into [kGeoCities_SD] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SD = <String, List<int>>{
   'SD-al_jazirah': <int>[0, 1, 2, 3, 4, 5, 6],

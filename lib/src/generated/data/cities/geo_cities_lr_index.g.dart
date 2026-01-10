@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/lr.json
-//
-// stateId -> indices into [kGeoCities_LR] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LR = <String, List<int>>{
   'LR-bomi_county': <int>[0],

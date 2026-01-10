@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/cf.json
-//
-// stateId -> indices into [kGeoCities_CF] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_CF = <String, List<int>>{
   'CF-bamingui_bangoran_prefecture': <int>[0, 1],

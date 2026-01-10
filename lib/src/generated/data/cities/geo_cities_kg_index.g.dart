@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/kg.json
-//
-// stateId -> indices into [kGeoCities_KG] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_KG = <String, List<int>>{
   'KG-batken_region': <int>[0, 1, 2, 3, 4, 5, 6],

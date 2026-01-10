@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ao.json
-//
-// stateId -> indices into [kGeoCities_AO] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_AO = <String, List<int>>{
   'AO-bengo_province': <int>[0],

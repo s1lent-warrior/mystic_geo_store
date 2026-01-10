@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/kw.json
-//
-// stateId -> indices into [kGeoCities_KW] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_KW = <String, List<int>>{
   'KW-al_ahmadi_governorate': <int>[0, 1, 2, 3, 4, 5, 6],

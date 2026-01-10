@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/kn.json
-//
-// stateId -> indices into [kGeoCities_KN] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_KN = <String, List<int>>{
   'KN-christ_church_nichola_town_parish': <int>[0],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/si.json
-//
-// stateId -> indices into [kGeoCities_SI] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SI = <String, List<int>>{
   'SI-ajdovscina_municipality': <int>[0, 1, 2],

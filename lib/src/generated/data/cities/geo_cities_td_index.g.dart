@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/td.json
-//
-// stateId -> indices into [kGeoCities_TD] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TD = <String, List<int>>{
   'TD-bahr_el_gazel': <int>[0],

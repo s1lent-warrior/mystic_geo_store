@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/py.json
-//
-// stateId -> indices into [kGeoCities_PY] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_PY = <String, List<int>>{
   'PY-alto_paraguay_department': <int>[0, 1],

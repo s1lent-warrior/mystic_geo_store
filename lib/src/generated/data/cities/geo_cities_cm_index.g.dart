@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/cm.json
-//
-// stateId -> indices into [kGeoCities_CM] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_CM = <String, List<int>>{
   'CM-adamawa': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],

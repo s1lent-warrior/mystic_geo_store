@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/cd.json
-//
-// stateId -> indices into [kGeoCities_CD] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_CD = <String, List<int>>{
   'CD-bas_congo_province': <int>[0, 1, 2, 3, 4, 5],

@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/eg.json
-//
-// stateId -> indices into [kGeoCities_EG] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_EG = <String, List<int>>{
   'EG-alexandria_governorate': <int>[0],

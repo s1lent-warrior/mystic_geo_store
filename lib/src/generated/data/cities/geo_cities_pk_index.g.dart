@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/pk.json
-//
-// stateId -> indices into [kGeoCities_PK] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_PK = <String, List<int>>{
   'PK-azad_kashmir': <int>[0, 1, 2, 3, 4, 5, 6],

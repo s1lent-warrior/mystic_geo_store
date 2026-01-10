@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/co.json
-//
-// stateId -> indices into [kGeoCities_CO] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_CO = <String, List<int>>{
   'CO-amazonas_department': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],

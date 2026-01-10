@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/mk.json
-//
-// stateId -> indices into [kGeoCities_MK] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MK = <String, List<int>>{
   'MK-aracinovo_municipality': <int>[0],

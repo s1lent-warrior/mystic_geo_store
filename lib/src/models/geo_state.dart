@@ -1,24 +1,19 @@
-import 'geo_country_iso2.dart';
+import 'package:meta/meta.dart';
 
-/// A first-level administrative division (e.g., state/province/region).
+import 'geo_country_iso.dart';
+
+/// First-level administrative division (state/region/province).
 ///
-/// Instances are generated as compile-time constants from the SoT dataset.
-///
-/// The [id] is a stable identifier used by [GeoCity.stateId] to join a city
-/// to its parent state.
+/// [id] is a SoT-stable identifier referenced by cities.
+@immutable
 class GeoState {
   const GeoState({
     required this.id,
     required this.name,
-    required this.countryIso2,
+    required this.countryIso,
   });
 
-  /// Stable state id (dataset-defined).
   final String id;
-
-  /// English display name.
   final String name;
-
-  /// Parent country ISO2.
-  final GeoCountryIso2 countryIso2;
+  final GeoCountryIso countryIso;
 }

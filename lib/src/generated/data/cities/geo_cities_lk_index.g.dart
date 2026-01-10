@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/lk.json
-//
-// stateId -> indices into [kGeoCities_LK] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LK = <String, List<int>>{
   'LK-central_province': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],

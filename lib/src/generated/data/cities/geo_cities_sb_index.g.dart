@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/sb.json
-//
-// stateId -> indices into [kGeoCities_SB] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SB = <String, List<int>>{
   'SB-central_province': <int>[0],

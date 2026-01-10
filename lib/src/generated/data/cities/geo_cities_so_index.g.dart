@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/so.json
-//
-// stateId -> indices into [kGeoCities_SO] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_SO = <String, List<int>>{
   'SO-bakool': <int>[0, 1, 2, 3],

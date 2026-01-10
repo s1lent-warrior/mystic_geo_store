@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/lv.json
-//
-// stateId -> indices into [kGeoCities_LV] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LV = <String, List<int>>{
   'LV-aglona_municipality': <int>[0],

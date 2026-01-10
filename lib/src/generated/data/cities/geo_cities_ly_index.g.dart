@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ly.json
-//
-// stateId -> indices into [kGeoCities_LY] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_LY = <String, List<int>>{
   'LY-al_wahat_district': <int>[0, 1, 2, 3, 4, 5],

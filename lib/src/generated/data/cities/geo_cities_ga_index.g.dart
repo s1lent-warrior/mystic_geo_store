@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ga.json
-//
-// stateId -> indices into [kGeoCities_GA] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_GA = <String, List<int>>{
   'GA-estuaire_province': <int>[0, 1, 2],

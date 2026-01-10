@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/ht.json
-//
-// stateId -> indices into [kGeoCities_HT] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_HT = <String, List<int>>{
   'HT-artibonite': <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],

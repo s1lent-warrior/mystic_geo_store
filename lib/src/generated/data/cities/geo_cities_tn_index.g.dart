@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/tn.json
-//
-// stateId -> indices into [kGeoCities_TN] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_TN = <String, List<int>>{
   'TN-ariana_governorate': <int>[0, 1],

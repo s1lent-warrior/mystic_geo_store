@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND.
 // Source: sot/cities/mz.json
-//
-// stateId -> indices into [kGeoCities_MZ] for fast citiesOfState lookups.
 
 const Map<String, List<int>> kGeoCityIndexByState_MZ = <String, List<int>>{
   'MZ-cabo_delgado_province': <int>[0, 1, 2, 3],

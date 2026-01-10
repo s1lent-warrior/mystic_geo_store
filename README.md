@@ -24,7 +24,7 @@ All data is generated ahead of time from a source-of-truth dataset and shipped a
 ## Features
 
 - 🌍 **Countries**
-  - ISO-3166-1 alpha-2 enum (`GeoCountryIso2`)
+  - ISO-3166-1 alpha-2 enum (`GeoCountryIso`)
   - Country name + flag emoji
   - Fast lookup and search
 
@@ -39,7 +39,7 @@ All data is generated ahead of time from a source-of-truth dataset and shipped a
   - Lightweight, picker-friendly search (no bloated indices)
 
 - 💱 **Currencies**
-  - ISO-4217 currency codes
+  - ISO-4217 currency codes enum (`GeoCurrencyIso`)
   - Name + symbol (safely escaped)
   - Country ↔ currency mappings
 
@@ -57,6 +57,34 @@ All data is generated ahead of time from a source-of-truth dataset and shipped a
   - Strong typing via enums and value objects
   - Exhaustive `switch` expressions internally
 
+## Enums for ISO codes
+
+This package exposes strongly-typed enums for ISO standards:
+
+- `GeoCountryIso` (ISO 3166-1 alpha-2, e.g. `PK`, `US`)
+- `GeoCurrencyIso` (ISO 4217, e.g. `USD`, `PKR`)
+
+Both enums:
+- use uppercase cases
+- include docs per case
+- provide `withCode(String)` which throws `ArgumentError` for invalid codes
+
+```dart
+final pk = GeoCountryIso.withCode('pk'); // PK
+final usd = GeoCurrencyIso.withCode('USD'); // USD
+````
+
+## Using extensions
+
+Convenience extensions connect enums to the store:
+
+```dart
+final pkCountry = GeoCountryIso.PK.country;
+final pkCurrency = GeoCountryIso.PK.currency;
+final usdModel = GeoCurrencyIso.USD.currency;
+final usdCountries = GeoCurrencyIso.USD.countries;
+```
+
 ---
 
 ## Getting started
@@ -72,7 +100,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  mystic_geo_store: ^1.0.0
+  mystic_geo_store: ^1.1.0
 ````
 
 Then run:
@@ -94,7 +122,7 @@ import 'package:mystic_geo_store/mystic_geo_store.dart';
 ### Accessing the singleton datasource
 
 ```dart
-final geo = GeoData.instance;
+final geo = GeoStore.instance;
 ```
 
 ---
@@ -106,18 +134,25 @@ final geo = GeoData.instance;
 final countries = geo.countries;
 
 // Lookup by ISO2
-final pakistan = geo.countryByIso2(GeoCountryIso2.PK);
+final pakistan = geo.countryByIso(GeoCountryIso.PK);
 
 // Parse ISO2 code (throws if invalid)
-final iso = GeoCountryIso2.withCode('pk');
+final iso = GeoCountryIso.withCode('pk');
 
 // Convenience extension
-final country = GeoCountryIso2.US.country;
+final country = GeoCountryIso.US.country;
 ```
 
 ### Searching countries (picker-friendly)
 
 ```dart
+// get a country by name (case insensitive)
+final countryByName = geo.countryByName('Pakistan');
+
+// get a country by name (case insensitive)
+final nullableCountryByName = geo.countryByNameOrNull('Pak');
+
+// search countries
 final results = geo.searchCountries(
   'uni',
   limit: 20,
@@ -130,11 +165,11 @@ final results = geo.searchCountries(
 
 ```dart
 // States of a country
-final states = geo.statesOf(GeoCountryIso2.PK);
+final states = geo.statesOf(GeoCountryIso.PK);
 
 // Search states within a country
 final filtered = geo.searchStates(
-  GeoCountryIso2.PK,
+  GeoCountryIso.PK,
   'pun',
 );
 
@@ -148,14 +183,14 @@ final state = geo.stateById('pk-pb');
 
 ```dart
 // All cities of a country (can be large)
-final cities = geo.citiesOf(GeoCountryIso2.PK);
+final cities = geo.citiesOf(GeoCountryIso.PK);
 
 // Cities of a specific state
 final stateCities = geo.citiesOfState('pk-pb');
 
 // Picker-style city search
 final matches = geo.searchCities(
-  GeoCountryIso2.PK,
+  GeoCountryIso.PK,
   'lah',
   limit: 50,
 );
@@ -165,7 +200,7 @@ You can also scope search to a state:
 
 ```dart
 final matches = geo.searchCities(
-  GeoCountryIso2.PK,
+  GeoCountryIso.PK,
   'lah',
   stateId: 'pk-pb',
 );
@@ -183,10 +218,13 @@ final currencies = geo.currencies;
 final usd = geo.currencyByCode('USD');
 
 // Currency used by a country
-final pkr = geo.currencyOf(GeoCountryIso2.PK);
+final pkr = geo.currencyOf(GeoCountryIso.PK);
+
+// Or via extension
+final entry = GeoCountryIso.PK.currency;
 
 // Countries using a currency
-final euroCountries = geo.countriesUsingCurrency('EUR');
+final euroCountries = geo.countriesUsingCurrency(GeoCurrencyIso.EUR);
 
 // Search currencies
 final matches = geo.searchCurrencies('dol');
@@ -197,11 +235,11 @@ final matches = geo.searchCurrencies('dol');
 ### Dial codes
 
 ```dart
-// Dial codes for a country
-final codes = geo.dialCodesOf(GeoCountryIso2.PK);
-
 // Dial code entry
-final entry = geo.dialCodeEntryOf(GeoCountryIso2.US);
+final entry = geo.dialCodeEntryOf(GeoCountryIso.US);
+
+// Or via extension
+final entry = GeoCountryIso.PK.dialCode;
 
 // Search by country name, ISO2, or prefix
 final matches = geo.searchDialCodes('+92');
@@ -217,44 +255,6 @@ final matches = geo.searchDialCodes('+92');
   * generated code size reasonable
   * analyzer and compile times fast
 * APIs are optimized for **UI pickers**, not fuzzy or ranked search engines.
-
----
-
-## Code generation
-
-This package includes a generator tool that converts raw JSON datasets into
-Dart source files.
-
-Typical usage:
-
-```bash
-dart run tool/generate.dart \
-  --input geo_sot_files.zip \
-  --out lib \
-  --emit-models
-```
-
-The generator supports:
-
-* zip files or extracted directories
-* deterministic output (stable diffs)
-* automatic string escaping for Dart safety
-
----
-
-## Additional information
-
-* 🐛 **Issues & bugs**: Please file issues with clear reproduction steps.
-* 💡 **Feature requests**: Keep the scope focused on static geo metadata.
-* 🤝 **Contributions**: PRs are welcome, especially for:
-
-  * data corrections
-  * additional integrity checks
-  * generator improvements
-
-This package is intentionally **simple, fast, and predictable** — designed to
-be a reliable building block for forms, onboarding flows, and internationalized
-apps.
 
 ---
 
@@ -289,12 +289,42 @@ If you are interested in the SoT format or regeneration process, see the
 The generator is intended for **maintainers and contributors**, not for
 runtime use.
 
+The generator supports:
+
+* zip files or extracted directories
+* deterministic output (stable diffs)
+* automatic string escaping for Dart safety
+
+Typical usage:
+
 ```bash
 dart run tool/generate.dart \
   --input geo_sot_files.zip \
-  --out lib \
-  --emit-models
-````
+  --out lib
+```
+
+### Supported Flags
+
+#### Generating model classes (`--emit-models`)
+Generates entities/model classes files under `lib/src/models/`.
+
+#### Strict vs lenient (`--lenient`)
+
+* **Strict (default)**: missing currency/dial mappings fail generation, `GeoCountry.currencyCode/dialCode` are non-nullable.
+* **Lenient (`--lenient`)**: missing becomes null, `GeoCountry.currencyCode/dialCode` are nullable.
+
+#### Optional `@immutable` (`--with-meta`)
+
+```bash
+dart run tool/generate.dart --input path/to/geo_sot.zip --out lib --emit-models --with-meta
+```
+
+If you use `--with-meta`, add:
+
+```yaml
+dependencies:
+  meta: ^1.0.0
+```
 
 Notes:
 
@@ -303,6 +333,21 @@ Notes:
 * Currency symbols and special characters are safely escaped.
 * The JSON datasets themselves are **not shipped** with the package.
 
+---
+
+## Additional information
+
+* 🐛 **Issues & bugs**: Please file issues with clear reproduction steps.
+* 💡 **Feature requests**: Keep the scope focused on static geo metadata.
+* 🤝 **Contributions**: PRs are welcome, especially for:
+
+  * data corrections
+  * additional integrity checks
+  * generator improvements
+
+This package is intentionally **simple, fast, and predictable** — designed to
+be a reliable building block for forms, onboarding flows, and internationalized
+apps.
 
 ---
 
@@ -352,7 +397,7 @@ This package does **not** distribute the raw geo datasets (countries, states,
 cities, currencies, dial codes).
 
 Any source-of-truth (SoT) datasets used to generate this package are maintained
-**separately** and may be subject to their own licenses and attribution
+[**separately**](https://github.com/s1lent-warrior/mystic_geo_store_sot) and may be subject to their own licenses and attribution
 requirements.
 
 Users who regenerate the data are responsible for ensuring compliance with the
