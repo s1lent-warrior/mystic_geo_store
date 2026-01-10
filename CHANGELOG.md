@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1] – Optional Limit for Searching
+
+- marked `limit` as optional argument for all search functions in `GeoStore`.
+
 ## [1.1.0] – Strict vs Lenient Generation, E.164 Dial Codes, Currency Enum
 ### Added
 - **`--lenient` generator flag**

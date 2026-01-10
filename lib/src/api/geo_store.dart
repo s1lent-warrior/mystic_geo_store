@@ -87,13 +87,13 @@ abstract interface class GeoStore {
   ///
   /// Parameters:
   /// - [query] raw user input (trimmed internally).
-  /// - [limit] max number of results to return (defaults to 50).
+  /// - [limit] max number of results to return (defaults to 50). Passing `null` means "No Limit".
   /// - [fields] which fields to match against.
   ///
   /// Returns an unmodifiable list. Empty query returns empty list.
   List<GeoCountry> searchCountries(
     String query, {
-    int limit = 50,
+    int? limit = 50,
     GeoCountrySearchField fields = GeoCountrySearchField.nameAndIso,
   });
 
@@ -115,10 +115,11 @@ abstract interface class GeoStore {
   ///
   /// Search is a simple normalized substring match over state name.
   /// Returns an unmodifiable list. Empty query returns empty list.
+  ///  Passing `null` as [limit] means "No Limit".
   List<GeoState> searchStates(
     GeoCountryIso country,
     String query, {
-    int limit = 50,
+    int? limit = 50,
   });
 
   // ---------------------------------------------------------------------------
@@ -144,7 +145,7 @@ abstract interface class GeoStore {
   /// - [country] restricts search to a country (keeps search fast for large datasets).
   /// - [query] raw user input; empty query returns empty list.
   /// - [stateId] optional filter to a specific state.
-  /// - [limit] maximum number of results.
+  /// - [limit] maximum number of results. Defaults to 50. Passing `null` means "No Limit".
   /// - [boostPrefixMatches] whether to rank prefix matches earlier (simple UX boost).
   /// - [fields] which fields to match against (name / IATA).
   ///
@@ -153,7 +154,7 @@ abstract interface class GeoStore {
     GeoCountryIso country,
     String query, {
     String? stateId,
-    int limit = 50,
+    int? limit = 50,
     bool boostPrefixMatches = true,
     GeoCitySearchField fields = GeoCitySearchField.nameAndIata,
   });
@@ -185,9 +186,10 @@ abstract interface class GeoStore {
   ///
   /// Uses normalized substring matching over selected fields (code/name/symbol).
   /// Returns an unmodifiable list. Empty query returns empty list.
+  ///  Passing `null` as [limit] means "No Limit".
   List<GeoCurrency> searchCurrencies(
     String query, {
-    int limit = 50,
+    int? limit = 50,
     GeoCurrencySearchField fields = GeoCurrencySearchField.codeNameSymbol,
   });
 
@@ -209,8 +211,9 @@ abstract interface class GeoStore {
   /// - dial code (E.164, prefix-friendly)
   ///
   /// Returns an unmodifiable list. Empty query returns empty list.
+  ///  Passing `null` as [limit] means "No Limit".
   List<GeoDialCodeEntry> searchDialCodes(
     String query, {
-    int limit = 50,
+    int? limit = 50,
   });
 }

@@ -7,6 +7,7 @@ final geoData = GeoStore.instance;
 void main() {
   testCountryNameByIso(GeoCountryIso.PK, 'Pakistan');
   testCountryByName('pakistan', 'Pakistan');
+  testCitySearch(GeoCountryIso.US);
 }
 
 void testCountryNameByIso(GeoCountryIso input, String expectation) {
@@ -29,5 +30,17 @@ void testCountryByName(String input, String expectation) {
       reason: 'Country found for name `$input`',
     );
     print('Country found for name `$input`');
+  });
+}
+
+void testCitySearch(GeoCountryIso input, [int? limit]) {
+  test('get cities for country', () {
+    final actual = geoData.searchCities(input, 'm', limit: limit);
+    expect(
+      actual.length,
+      isNot(0),
+      reason: '${actual.length} cities found for `$input`',
+    );
+    print('${actual.length} cities found for `$input`');
   });
 }
