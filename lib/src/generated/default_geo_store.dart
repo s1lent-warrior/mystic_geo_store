@@ -80,19 +80,23 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
   @override
   List<GeoCountry> searchCountries(
     String query, {
-    int limit = 50,
+    int? limit = 50,
     GeoCountrySearchField fields = GeoCountrySearchField.nameAndIso,
   }) {
-    if (limit <= 0) return const <GeoCountry>[];
+    // `null` => no limit
+    // `<= 0` => empty (caller explicitly asked for none)
+    if (limit != null && limit <= 0) return const <GeoCountry>[];
+
     final qRaw = query.trim();
     final q = normalizeSearch(qRaw);
     if (q.isEmpty) return const <GeoCountry>[];
 
     final qUpper = qRaw.toUpperCase();
+    final hasLimit = limit != null;
 
     final out = <GeoCountry>[];
     for (final c in kGeoCountries) {
-      if (out.length >= limit) break;
+      if (hasLimit && out.length >= limit) break;
 
       final nameHit = switch (fields) {
         GeoCountrySearchField.name ||
@@ -134,15 +138,18 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
   List<GeoState> searchStates(
     GeoCountryIso country,
     String query, {
-    int limit = 50,
+    int? limit = 50,
   }) {
-    if (limit <= 0) return const <GeoState>[];
+    if (limit != null && limit <= 0) return const <GeoState>[];
+
     final q = normalizeSearch(query.trim());
     if (q.isEmpty) return const <GeoState>[];
 
+    final hasLimit = limit != null;
+
     final out = <GeoState>[];
     for (final s in geoStatesBucketForCountry(country)) {
-      if (out.length >= limit) break;
+      if (hasLimit && out.length >= limit) break;
       if (normalizeSearch(s.name).contains(q)) out.add(s);
     }
     return List<GeoState>.unmodifiable(out);
@@ -181,14 +188,18 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
     GeoCountryIso country,
     String query, {
     String? stateId,
-    int limit = 50,
+    int? limit = 50,
     bool boostPrefixMatches = true,
     GeoCitySearchField fields = GeoCitySearchField.nameAndIata,
   }) {
-    if (limit <= 0) return const <GeoCity>[];
+    if (limit != null && limit <= 0) return const <GeoCity>[];
+
     final qRaw = query.trim();
     final q = normalizeSearch(qRaw);
     if (q.isEmpty) return const <GeoCity>[];
+
+    final hasLimit = limit != null;
+    final qUpper = qRaw.toUpperCase();
 
     Iterable<GeoCity> base;
     if (stateId != null && stateId.trim().isNotEmpty) {
@@ -208,14 +219,13 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
       final iataHit = switch (fields) {
         GeoCitySearchField.iata ||
         GeoCitySearchField.nameAndIata =>
-          (c.iata ?? '').toUpperCase().contains(qRaw.toUpperCase()),
+          (c.iata ?? '').toUpperCase().contains(qUpper),
         _ => false,
       };
 
       return nameHit || iataHit;
     }
 
-    // Optional UX boost: prioritize prefix matches.
     int score(GeoCity c) {
       if (!boostPrefixMatches) return 0;
       final n = normalizeSearch(c.name);
@@ -227,19 +237,21 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
     final matches = <GeoCity>[];
     for (final c in base) {
       if (hit(c)) matches.add(c);
-      if (matches.length > (limit * 5)) {
-        // Avoid unbounded memory for very broad queries.
-        break;
-      }
+
+      // Keep memory bounded for very broad queries.
+      // When limit is null, fall back to a conservative cap.
+      final cap = hasLimit ? (limit * 5) : 5000;
+      if (matches.length > cap) break;
     }
 
     if (boostPrefixMatches) {
       matches.sort((a, b) => score(b).compareTo(score(a)));
     }
 
-    if (matches.length > limit) {
+    if (hasLimit && matches.length > limit) {
       return List<GeoCity>.unmodifiable(matches.take(limit).toList());
     }
+
     return List<GeoCity>.unmodifiable(matches);
   }
 
@@ -260,7 +272,6 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
 
   @override
   GeoCurrency currencyOf(GeoCountryIso country) {
-    // Countries embed currencyCode in GeoCountry, but map is canonical too.
     final codeStr = kGeoCurrencyCodeByCountry[country];
     if (codeStr == null || codeStr.trim().isEmpty) {
       throw StateError(
@@ -282,19 +293,21 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
   @override
   List<GeoCurrency> searchCurrencies(
     String query, {
-    int limit = 50,
+    int? limit = 50,
     GeoCurrencySearchField fields = GeoCurrencySearchField.codeNameSymbol,
   }) {
-    if (limit <= 0) return const <GeoCurrency>[];
+    if (limit != null && limit <= 0) return const <GeoCurrency>[];
+
     final qRaw = query.trim();
     final q = normalizeSearch(qRaw);
     if (q.isEmpty) return const <GeoCurrency>[];
 
+    final hasLimit = limit != null;
     final qUpper = qRaw.toUpperCase();
 
     final out = <GeoCurrency>[];
     for (final c in kGeoCurrencies) {
-      if (out.length >= limit) break;
+      if (hasLimit && out.length >= limit) break;
 
       final codeHit = switch (fields) {
         GeoCurrencySearchField.code ||
@@ -337,21 +350,22 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
   @override
   List<GeoDialCodeEntry> searchDialCodes(
     String query, {
-    int limit = 50,
+    int? limit = 50,
   }) {
-    if (limit <= 0) return const <GeoDialCodeEntry>[];
+    if (limit != null && limit <= 0) return const <GeoDialCodeEntry>[];
 
     final qRaw = query.trim();
     final q = normalizeSearch(qRaw);
     if (q.isEmpty) return const <GeoDialCodeEntry>[];
 
+    final hasLimit = limit != null;
     final qUpper = qRaw.toUpperCase();
     final qDigits =
         qRaw.replaceAll('+', '').replaceAll(RegExp(r'\D'), '').trim();
 
     final out = <GeoDialCodeEntry>[];
     for (final e in kGeoDialCodes) {
-      if (out.length >= limit) break;
+      if (hasLimit && out.length >= limit) break;
 
       final country = countryByIso(e.countryIso);
       final countryName = normalizeSearch(country.name);
