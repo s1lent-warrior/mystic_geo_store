@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2] – Add Indexing to States Search
+
+- add indexing to states search
+- fix a bug in searching
+
+- marked `limit` as optional argument for all search functions in `GeoStore`.
+
 ## [1.1.1] – Optional Limit for Searching
 
 - marked `limit` as optional argument for all search functions in `GeoStore`.
