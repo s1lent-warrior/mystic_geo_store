@@ -98,7 +98,9 @@ String? _arg(List<String> args, String name) {
 bool _hasFlag(List<String> args, String name) => args.contains(name);
 
 Future<Directory> _resolveWorkDir(
-    String input, FileSystemEntityType type) async {
+  String input,
+  FileSystemEntityType type,
+) async {
   if (type == FileSystemEntityType.directory) return Directory(input);
 
   final bytes = File(input).readAsBytesSync();
@@ -148,9 +150,8 @@ Future<void> _generate({
 
   final countries =
       (countriesDoc['countries'] as List).cast<Map<String, Object?>>();
-  countries.sort(
-    (a, b) => (a['iso2'] as String).compareTo(b['iso2'] as String),
-  );
+  countries
+      .sort((a, b) => (a['iso2'] as String).compareTo(b['iso2'] as String));
 
   final currencyCodeByCountry =
       (currenciesDoc['currencyCodeByCountryIso2'] as Map?)
@@ -176,8 +177,7 @@ Future<void> _generate({
 
     if (missingCurrency.isNotEmpty || missingDial.isNotEmpty) {
       stderr.writeln(
-        '❌ Generation failed (strict mode). Missing required mappings:',
-      );
+          '❌ Generation failed (strict mode). Missing required mappings:');
       if (missingCurrency.isNotEmpty) {
         stderr.writeln(
           '  - Missing currencyCode for ${missingCurrency.length} countries: '
@@ -192,8 +192,7 @@ Future<void> _generate({
       }
       stderr.writeln();
       stderr.writeln(
-        'Tip: run with --lenient to allow nulls while iterating on SoT.',
-      );
+          'Tip: run with --lenient to allow nulls while iterating on SoT.');
       exitCode = 1;
       return;
     }
@@ -277,7 +276,7 @@ Future<void> _generate({
     _emitCountriesByCurrency(currenciesDoc),
   );
 
-  // 6) States buckets + lookup + index
+  // 6) States buckets + lookup + index (+ per-country range slicing)
   final statesSotDir = Directory('${sotDir.path}/states');
   final stateFiles = statesSotDir
       .listSync()
@@ -298,6 +297,8 @@ Future<void> _generate({
     final doc = _readJsonMap(f);
     final list = (doc['states'] as List).cast<Map<String, Object?>>();
 
+    // Critical: keep states grouped by country ISO in each bucket, so each
+    // country's states occupy a contiguous range.
     list.sort((a, b) {
       final ca = (a['countryIso2'] as String).toUpperCase();
       final cb = (b['countryIso2'] as String).toUpperCase();
@@ -319,6 +320,8 @@ Future<void> _generate({
       stateById[id] = s;
 
       final iso = (s['countryIso2'] as String).toUpperCase();
+      // NOTE: bucket is a file partition. Countries sharing the same initial
+      // letter will share a bucket; do NOT treat this mapping as "states-of".
       countryToBucket.putIfAbsent(iso, () => bucket);
     }
   }
@@ -337,9 +340,14 @@ Future<void> _generate({
     _emitStateById(stateById),
   );
 
+  // ✅ UPDATED: states index now also emits a per-country range selector.
   _writeFile(
     File('${statesDir.path}/geo_states_index.g.dart'),
-    _emitStatesIndex(countries, bucketKeys, countryToBucket),
+    _emitStatesIndexWithRanges(
+      countries: countries,
+      buckets: buckets,
+      countryToBucket: countryToBucket,
+    ),
   );
 
   // 7) Cities per country + indexes
@@ -412,6 +420,12 @@ void _writeFile(File f, String content) {
 }
 
 /// Safe single-quoted Dart string literal escaping.
+///
+/// Escapes:
+/// - backslash
+/// - single quote
+/// - dollar sign (prevents string interpolation compile errors)
+/// - CR/LF
 String _dartStr(String s) {
   var v = s;
   v = v.replaceAll('\\', r'\\');
@@ -554,8 +568,13 @@ ${_immutableAnnotation(withMeta: withMeta)}class GeoState {
     required this.countryIso,
   });
 
+  /// SoT-stable identifier (used by cities via `stateId`).
   final String id;
+
+  /// Display name.
   final String name;
+
+  /// Owning country ISO code.
   final GeoCountryIso countryIso;
 }
 ''';
@@ -575,10 +594,19 @@ ${_immutableAnnotation(withMeta: withMeta)}class GeoCity {
     this.iata,
   });
 
+  /// SoT-stable identifier.
   final String id;
+
+  /// Display name.
   final String name;
+
+  /// Owning country ISO code.
   final GeoCountryIso countryIso;
+
+  /// Foreign key to [GeoState.id].
   final String stateId;
+
+  /// Optional IATA airport code (if available).
   final String? iata;
 }
 ''';
@@ -594,8 +622,13 @@ ${_immutableAnnotation(withMeta: withMeta)}class GeoCurrency {
     this.symbol,
   });
 
+  /// ISO 4217 currency code (e.g. "USD").
   final String code;
+
+  /// Currency name (e.g. "US Dollar").
   final String name;
+
+  /// Currency symbol (may be null).
   final String? symbol;
 }
 ''';
@@ -612,7 +645,10 @@ ${_immutableAnnotation(withMeta: withMeta)}class GeoDialCodeEntry {
     required this.dialCode,
   });
 
+  /// Owning country ISO.
   final GeoCountryIso countryIso;
+
+  /// Primary dial code in E.164 format (e.g. "+92").
   final String dialCode;
 }
 ''';
@@ -786,8 +822,7 @@ String _emitCountriesTable({
     ..writeln('];')
     ..writeln()
     ..writeln(
-      'const Map<GeoCountryIso, int> kGeoCountryIndexByIso = <GeoCountryIso, int>{',
-    );
+        'const Map<GeoCountryIso, int> kGeoCountryIndexByIso = <GeoCountryIso, int>{');
 
   for (var i = 0; i < countries.length; i++) {
     final iso = (countries[i]['iso2'] as String).toUpperCase();
@@ -822,8 +857,7 @@ String _emitDialCodesTable(Map<String, String> dialCodeByIso2) {
     ..writeln('];')
     ..writeln()
     ..writeln(
-      'const Map<GeoCountryIso, int> kGeoDialCodeIndexByIso = <GeoCountryIso, int>{',
-    );
+        'const Map<GeoCountryIso, int> kGeoDialCodeIndexByIso = <GeoCountryIso, int>{');
 
   for (var i = 0; i < keys.length; i++) {
     b.writeln('  GeoCountryIso.${keys[i].toUpperCase()}: $i,');
@@ -974,24 +1008,96 @@ String _emitStateById(Map<String, Map<String, Object?>> stateById) {
   return b.toString();
 }
 
-String _emitStatesIndex(
-  List<Map<String, Object?>> countries,
-  List<String> buckets,
-  Map<String, String> countryToBucket,
-) {
+/// Emits both:
+/// - `geoStatesBucketForCountry(iso)` which selects the correct bucket list
+/// - `geoStateRangeInBucketForCountry(iso)` which returns `(start, end)` slice
+///   indices within that bucket for the requested country.
+///
+/// This enables an O(k) retrieval of `statesOf(iso)` where k is the number of
+/// states for that country (no scanning over the whole alphabet bucket).
+String _emitStatesIndexWithRanges({
+  required List<Map<String, Object?>> countries,
+  required Map<String, List<Map<String, Object?>>> buckets,
+  required Map<String, String> countryToBucket,
+}) {
+  // Build: iso -> (bucket, start, end)
+  final isoToRange = <String, _IsoBucketRange>{};
+
+  for (final entry in buckets.entries) {
+    final bucket = entry.key; // e.g. "A"
+    final list = entry.value;
+
+    // list is already sorted by (countryIso2, name, id) by generation step.
+    var i = 0;
+    while (i < list.length) {
+      final iso = (list[i]['countryIso2'] as String).toUpperCase();
+      final start = i;
+      i++;
+      while (i < list.length) {
+        final nextIso = (list[i]['countryIso2'] as String).toUpperCase();
+        if (nextIso != iso) break;
+        i++;
+      }
+      final end = i; // exclusive
+
+      // If a country appears multiple times in a bucket, that's a SoT invariant
+      // violation because sorting groups by ISO should make it contiguous once.
+      final existing = isoToRange[iso];
+      if (existing != null) {
+        stderr.writeln(
+          '❌ Generation failed: country $iso produced multiple ranges in bucket $bucket. '
+          'This indicates non-contiguous grouping in states SoT or a sorting bug.',
+        );
+        exitCode = 1;
+        // Return a file that makes the failure obvious at build-time.
+        return '''
+// GENERATED CODE - DO NOT MODIFY BY HAND.
+// ERROR: non-contiguous grouping detected for country $iso in bucket $bucket.
+throw StateError('mystic_geo_store generator failed: non-contiguous state grouping for $iso');
+''';
+      }
+
+      isoToRange[iso] = _IsoBucketRange(bucket: bucket, start: start, end: end);
+    }
+  }
+
+  // Ensure every country maps to some bucket/range (when states exist for it).
+  // We do NOT hard-fail here because some countries may legitimately have zero
+  // states in your dataset. Consumers should handle empty results.
+  //
+  // However, if `countryToBucket` claims a bucket and we can't find any range,
+  // that suggests the bucket is empty for that ISO. That's fine and means
+  // "no states for that country".
+
+  final orderedBuckets = buckets.keys.toList()..sort();
+
   final b = StringBuffer()
     ..writeln('// GENERATED CODE - DO NOT MODIFY BY HAND.')
     ..writeln('// Source: sot/states/*.json')
+    ..writeln('//')
+    ..writeln('// This file provides:')
+    ..writeln('// - bucket selection per country ISO')
+    ..writeln(
+        '// - a range index (start,end) within that bucket for fast slicing')
     ..writeln()
     ..writeln("import '../../../models/geo_country_iso.dart';")
-    ..writeln("import '../../../models/geo_state.dart';");
+    ..writeln("import '../../../models/geo_state.dart';")
+    ..writeln();
 
-  for (final bucket in buckets) {
+  for (final bucket in orderedBuckets) {
     b.writeln("import 'geo_states_${bucket.toLowerCase()}.g.dart';");
   }
 
+  // (1) Bucket selector: iso -> bucket list
   b
     ..writeln()
+    ..writeln(
+        '/// Returns the alphabet bucket list that contains states for [iso].')
+    ..writeln('///')
+    ..writeln(
+        '/// Note: the returned list may include states for multiple countries.')
+    ..writeln(
+        '/// Use [geoStateRangeInBucketForCountry] to slice the relevant sub-range.')
     ..writeln('List<GeoState> geoStatesBucketForCountry(GeoCountryIso iso) =>')
     ..writeln('    switch (iso) {');
 
@@ -1002,7 +1108,48 @@ String _emitStatesIndex(
   }
 
   b.writeln('    };');
+
+  // (2) Range selector: iso -> (start,end) within that bucket
+  b
+    ..writeln()
+    ..writeln(
+        '/// Returns the `(start, endExclusive)` range of states for [iso] within')
+    ..writeln('/// the bucket list returned by [geoStatesBucketForCountry].')
+    ..writeln('///')
+    ..writeln(
+        '/// The bucket list is sorted by `(countryIso, name, id)` during generation,')
+    ..writeln('/// so each country occupies a contiguous slice.')
+    ..writeln('///')
+    ..writeln('/// Returns `null` if the country has no states in the dataset.')
+    ..writeln(
+        '(int start, int endExclusive)? geoStateRangeInBucketForCountry(GeoCountryIso iso) =>')
+    ..writeln('    switch (iso) {');
+
+  for (final c in countries) {
+    final iso = (c['iso2'] as String).toUpperCase();
+    final r = isoToRange[iso];
+    if (r == null) {
+      b.writeln('      GeoCountryIso.$iso => null,');
+    } else {
+      b.writeln('      GeoCountryIso.$iso => (${r.start}, ${r.end}),');
+    }
+  }
+
+  b.writeln('    };');
+
   return b.toString();
+}
+
+class _IsoBucketRange {
+  _IsoBucketRange({
+    required this.bucket,
+    required this.start,
+    required this.end,
+  });
+
+  final String bucket;
+  final int start;
+  final int end;
 }
 
 String _emitCitiesCountry(String iso, List<Map<String, Object?>> cities) {

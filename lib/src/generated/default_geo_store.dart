@@ -124,11 +124,22 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
 
   @override
   List<GeoState> statesOf(GeoCountryIso country) {
-    final list = geoStatesBucketForCountry(country);
-    // Ensure consumers cannot mutate.
-    return list is UnmodifiableListView<GeoState>
-        ? list
-        : List<GeoState>.unmodifiable(list);
+    // Bucket contains multiple countries; range tells the exact slice.
+    final bucket = geoStatesBucketForCountry(country);
+    final range = geoStateRangeInBucketForCountry(country);
+    if (range == null) return const <GeoState>[];
+
+    final (start, endExclusive) = range;
+    if (start < 0 || endExclusive > bucket.length || start >= endExclusive) {
+      // Defensive: should never happen if generator output is consistent.
+      throw StateError(
+        'GeoStore inconsistent: invalid state range ($start, $endExclusive) '
+        'for country ${country.code} (bucket size: ${bucket.length}).',
+      );
+    }
+
+    // Always return an unmodifiable view for API safety.
+    return List<GeoState>.unmodifiable(bucket.getRange(start, endExclusive));
   }
 
   @override
@@ -140,18 +151,31 @@ class DefaultGeoStore with StringSearchable implements GeoStore {
     String query, {
     int? limit = 50,
   }) {
+    // Convention: limit <= 0 means "no results" (consistent with your other APIs).
     if (limit != null && limit <= 0) return const <GeoState>[];
 
     final q = normalizeSearch(query.trim());
     if (q.isEmpty) return const <GeoState>[];
 
-    final hasLimit = limit != null;
+    final bucket = geoStatesBucketForCountry(country);
+    final range = geoStateRangeInBucketForCountry(country);
+    if (range == null) return const <GeoState>[];
 
-    final out = <GeoState>[];
-    for (final s in geoStatesBucketForCountry(country)) {
-      if (hasLimit && out.length >= limit) break;
-      if (normalizeSearch(s.name).contains(q)) out.add(s);
+    final (start, endExclusive) = range;
+    if (start < 0 || endExclusive > bucket.length || start > endExclusive) {
+      throw StateError(
+        'GeoStore inconsistent: invalid state range ($start, $endExclusive) '
+        'for country ${country.code} (bucket size: ${bucket.length}).',
+      );
     }
+
+    final hasLimit = limit != null;
+    final out = <GeoState>[];
+    for (final s in bucket.getRange(start, endExclusive)) {
+      if (normalizeSearch(s.name).contains(q)) out.add(s);
+      if (hasLimit && out.length >= limit) break;
+    }
+
     return List<GeoState>.unmodifiable(out);
   }
 
